@@ -7,669 +7,440 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Karan Singh Portfolio">
 	<meta name="keyword" content="email, name, word">
-	<link rel="icon" href="icon.png">
+	<link rel="icon" href="image/icon.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
-	<style>
-		body {
-			font-family: monospace;
-		}
-
-		.animation ul {
-			list-style: none;
-			position: fixed;
-			bottom: 0;
-			animation: move linear 15s infinite alternate;
-			margin: 0;
-		}
-
-		.animation ul li {
-			float: left;
-			padding: 50px;
-			border: transparent;
-			margin: 36px;
-			background: linear-gradient(45deg, lightblue, transparent);
-			border-radius: 10px;
-			box-shadow: 2px 3pc 13pc #1c76bb;
-			animation: myfirst linear 9s infinite;
-		}
-
-		@keyframes myfirst {
-			50% {
-				transform: rotate(180deg);
-			}
-		}
-
-		.animation ul .li-1 {
-			border-radius: 50% !important;
-			padding: 20px !important;
-			margin: -14px 72px;
-		}
-
-		.animation ul .li-2 {
-			margin: 95px 0px;
-			padding: 40px !important;
-		}
-
-		.animation ul .li-3 {
-			border-radius: 50% !important;
-			padding: 20px 30px 10px 40px !important;
-			margin: 1px 56px;
-		}
-
-		.animation ul .li-4 {
-			border-radius: 20px 30px !important;
-			margin: 187px 0px;
-		}
-
-		.animation ul .li-5 {
-			border-radius: 37% !important;
-			padding: 37px !important;
-		}
-
-		@keyframes move {
-			from {
-				position: fixed;
-				bottom: 5%;
-				top: 80%;
-			}
-
-			to {
-				position: fixed;
-				top: 5%;
-				bottom: 80%;
-			}
-		}
-
-		nav ul li a {
-			padding: 11px 20px !important;
-		}
-
-		nav ul a span {
-			color: chartreuse !important;
-			position: relative;
-			transition: .3s !important;
-		}
-
-		nav ul a span::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			height: 2px;
-			width: 0px;
-			background: orange;
-			transition: .6s !important;
-			filter: drop-shadow(2px 4px 6px #96f07a);
-
-		}
-
-		nav ul a span:hover::after {
-			width: 100%;
-		}
-
-		.navbar-brand {
-			font-family: fantasy;
-			letter-spacing: 3px;
-			font-weight: 100;
-		}
-
-		h1 {
-			font-size: 66px;
-			font-weight: bold;
-			font-family: cursive;
-		}
-
-		span {
-			color: chartreuse;
-		}
-
-		h5 {
-			color: white;
-			opacity: .3;
-			margin-top: -71px;
-			font-size: 5.5rem;
-			font-family: cursive;
-		}
-
-		p {
-			font-size: 18px;
-			text-align: center;
-			font-weight: bold;
-		}
-
-		#home p {
-			text-align: left;
-			color: gray;
-		}
-
-		#about {
-			background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-			color: white;
-			padding: 50px;
-			overflow: hidden;
-		}
-
-		#about span {
-			display: block;
-			font-size: 25px;
-		}
-
-		#skill {
-			background: rgb(63, 94, 251);
-			background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-		}
-
-		#skill span {
-			color: white;
-			font-weight: bold;
-		}
-
-		#skill i {
-			color: yellow;
-		}
-
-		#project img {
-			width: 100%;
-			height: 300px;
-			overflow: hidden;
-		}
-
-
-		#project .button {
-			margin-top: 20px;
-			border: 1.6px solid white;
-			border-radius: 10px 10px 50px 50px;
-			box-shadow: 1px 3px 10px #96ff2e;
-			padding: 6px 23px;
-			font-weight: bold;
-			color: white;
-			background: linear-gradient(177deg, yellow, orange, red);
-			transition: all .5s ease;
-		}
-
-		#project .button:hover {
-			border-radius: 50px 50px 0px 0px;
-		}
-
-		#project i {
-			color: yellow;
-			font-size: 32px !important;
-		}
-
-		#project .card h2 {
-			font-size: 22px;
-			font-weight: bold;
-		}
-
-		#project .card {
-			box-shadow: 10px 10px 10px white;
-		}
-
-		#project .card .card-body {
-			font-size: 50px;
-			font-weight: bold;
-			color: yellow;
-		}
-
-		#project .card .card-header {
-			border-bottom: 5px solid #7ffee0;
-		}
-
-		#contact {
-			background: linear-gradient(-9deg, #5757ff, #ff23ff, #fa6464);
-			overflow: hidden;
-		}
-
-		#contact i {
-			color: yellow;
-			background: black;
-			font-size: 81px;
-			padding: 39px 42px;
-			border-radius: 49%;
-			border: 2px solid white;
-			filter: drop-shadow(0px 0px 10px black);
-		}
-
-		#contact .me {
-			font-size: 20px;
-			font-weight: bold;
-			color: yellow;
-			margin: 10px;
-		}
-
-		.to-top {
-			position: fixed;
-			bottom: 30px;
-			right: 30px;
-			cursor: pointer;
-			font-size: 30px;
-			padding: 2px 10px;
-			border-radius: 50px;
-			filter: drop-shadow(5px 2px 11px orange);
-			background: linear-gradient(45deg, yellow, red, orange);
-			color: #c6ff68;
-			transition: all .8s ease;
-		}
-
-		.to-top:hover {
-			padding: 6px 21px 9px 6px;
-			filter: invert(1);
-			color: white;
-			text-shadow: 0px 15px 5px #004fff;
-			box-shadow: 0px 26px 27px #0086ff;
-		}
-
-		::-webkit-scrollbar {
-			width: 10px;
-		}
-
-		/* Track */
-		::-webkit-scrollbar-track {
-			background: #d0e4f4;
-			;
-		}
-
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background: linear-gradient(45deg, rgba(131, 58, 180, 1) 18%, rgba(253, 29, 29, 1) 72%, rgba(252, 176, 69, 1) 100%);
-		}
-
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-			background: #68b9eb;
-		}
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<div class="animation">
-		<ul class="" id="">
-			<li class="li-1"></li>
-			<li class="li-2"></li>
-			<li class="li-3"></li>
-			<li class="li-4"></li>
-			<li class="li-5"></li>
-			<li class="li-6"></li>
-			<li class="li-3"></li>
-			<li class="li-1"></li>
-		</ul>
-	</div>
-	<!--Top-menu-->
-	<nav class="navbar navbar-expand-md bg-white sticky-top shadow p-3">
-		<div class="container">
-			<a class="navbar-brand" href="#"><b>
-					<span style="color:#4285f4;">K</span><span style="color:#ea4335;">A</span><span
-						style="color:#fbbc05;">R</span><span style="color:#ea4335;">A</span><span
-						style="color:#34a853;">N</span></b></a>
-			<button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><i
-					class="fa-solid fa-bars"></i></button>
-			<div class="collapse navbar-collapse" id="menu">
-				<ul class="navbar-nav  ms-md-auto">
-					<li class="nav-item"><a class="nav-link" href="#home"><span class="p-2">Home</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="#about"><span class="p-2">About Us</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="#skill"><span class="p-2">Skills</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="#project"><span class="p-2">Projects</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact"><span class="p-2">Contact Us</span></a>
-					</li>
-				</ul>
-			</div>
+	<div class="page">
+		<div class="animation">
+			<ul class="" id="">
+				<li class="li-1"></li>
+				<li class="li-2"></li>
+				<li class="li-3"></li>
+				<li class="li-4"></li>
+				<li class="li-5"></li>
+				<li class="li-6"></li>
+				<li class="li-3"></li>
+				<li class="li-1"></li>
+			</ul>
 		</div>
-	</nav>
+		<!--Top-menu-->
+		<nav class="navbar navbar-expand-md bg-white sticky-top shadow p-3">
+			<div class="container">
+				<a class="navbar-brand" href="#"><b>
+						<img src="image/logoK.png" width="100px" alt=""></a>
+				<button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><i
+						class="fa-solid fa-bars"></i></button>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="navbar-nav  ms-md-auto">
+						<li class="nav-item"><a class="nav-link" href="#home"><span class="p-2">Home</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#about"><span class="p-2">About Us</span></a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#skill"><span class="p-2">Skills</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="#project"><span class="p-2">Projects</span></a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#contact"><span class="p-2">Contact Us</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-	<section id="home">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="row p-5">
-									<div class="col-6">
-										<h3>!Hello</h3>
-										<h1>
-											<strong>
-												I'm <span>Karan Singh</span>
-											</strong>
-										</h1>
-										<p>
-											I enjoy coding a lot, so I try to learn as many new things as possible so
-											that my coding skills improve day by day. When
-											I learn something new in coding, I work hard on it with all my heart and try
-											to make myself perfect in it.
-										</p>
+		<section id="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="row p-5">
+										<div class="col-6">
+											<h3>!Hello</h3>
+											<h1>
+												<strong>
+													I'm <span>Karan Singh</span>
+												</strong>
+											</h1>
+											<p>
+												I enjoy coding a lot, so I try to learn as many new things as possible
+												so
+												that my coding skills improve day by day. When
+												I learn something new in coding, I work hard on it with all my heart and
+												try
+												to make myself perfect in it.
+											</p>
+										</div>
+										<div class="col-6">
+											<img src="image/myportfolio.png"
+												class="d-block w-100 shadow rounded-pill pe-3" alt="...">
+										</div>
 									</div>
-									<div class="col-6">
-										<img src="myportfolio.png" class="d-block w-100 shadow rounded-pill pe-3"
-											alt="...">
+								</div>
+								<div class="carousel-item">
+									<div class="row p-5">
+										<div class="col-6">
+											<h3>!Hello</h3>
+											<h1>
+												<strong>
+													I'm <span>Website Developer</span>
+												</strong>
+											</h1>
+											<p>
+												I enjoy coding a lot, so I try to learn as many new things as possible
+												so
+												that my coding skills improve day by day. When
+												I learn something new in coding, I work hard on it with all my heart and
+												try
+												to make myself perfect in it.
+											</p>
+										</div>
+										<div class="col-6">
+											<img src="image/myportfolio.png"
+												class="d-block w-100 shadow rounded-pill pe-3" alt="...">
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="row p-5">
+										<div class="col-6">
+											<h3>!Hello</h3>
+											<h1>
+												<strong>
+													I'm <span>Full Stack Developer</span>
+												</strong>
+											</h1>
+											<p>
+												I enjoy coding a lot, so I try to learn as many new things as possible
+												so
+												that my coding skills improve day by day. When
+												I learn something new in coding, I work hard on it with all my heart and
+												try
+												to make myself perfect in it.
+											</p>
+										</div>
+										<div class="col-6">
+											<img src="image/myportfolio.png"
+												class="d-block w-100 shadow rounded-pill pe-3" alt="...">
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item">
-								<div class="row p-5">
-									<div class="col-6">
-										<h3>!Hello</h3>
-										<h1>
-											<strong>
-												I'm <span>Website Developer</span>
-											</strong>
-										</h1>
-										<p>
-											I enjoy coding a lot, so I try to learn as many new things as possible so
-											that my coding skills improve day by day. When
-											I learn something new in coding, I work hard on it with all my heart and try
-											to make myself perfect in it.
-										</p>
-									</div>
-									<div class="col-6">
-										<img src="myportfolio.png" class="d-block w-100 shadow rounded-pill pe-3"
-											alt="...">
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="row p-5">
-									<div class="col-6">
-										<h3>!Hello</h3>
-										<h1>
-											<strong>
-												I'm <span>Full Stack Developer</span>
-											</strong>
-										</h1>
-										<p>
-											I enjoy coding a lot, so I try to learn as many new things as possible so
-											that my coding skills improve day by day. When
-											I learn something new in coding, I work hard on it with all my heart and try
-											to make myself perfect in it.
-										</p>
-									</div>
-									<div class="col-6">
-										<img src="myportfolio.png" class="d-block w-100 shadow rounded-pill pe-3"
-											alt="...">
-									</div>
-								</div>
-							</div>
+							<button class="carousel-control-prev" type="button"
+								data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button"
+								data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
 						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-							data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-							data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="about">
-		<div class="container">
-			<div class="row mt-4">
-				<div class="col-12 p-4">
-					<div>
-						<h1 class="text-center">About Me</h1>
-						<h5 class="text-center position-relative">ABOUT</h5>
-					</div>
-					<p>
-						I enjoy coding a lot, so I try to learn as many new things as possible so that my coding skills
-						improve day by day. When
-						I learn something new in coding, I work hard on it with all my heart and try to make myself
-						perfect in it.
-					</p>
-					<div class="row">
-						<div class="col-md-2"></div>
-						<div class="col-md-8">
-							<span><b>Name</b> : Karan Singh</span>
-							<span><b>Date of birth</b> : 10/08/2002</span>
-							<span><b>Address</b> : Almora, Uttarakhand, India</span>
-							<span><b>Current Address</b> : Dwarka Mor, New Delhi, India</span>
-							<span><b>Email</b> : karan.front.developer@gmail.com</span>
-							<span><b>Phone</b> : 9389256332</span>
-							<span><b>Resume</b> : <a href="Karan-Resume.pdf"
-									class="btn bg-info rounded-pill shadow text-white fw-bold">Download
-									<i class="fa-solid fa-file-arrow-down text-black"></i>
-								</a>
-							</span>
-						</div>
-						<div class="col-md-2"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="skill">
-		<div class="container">
-			<div class="row mt-4 p-5">
-				<div class="col-12 p-5">
-					<div class="row">
+		<section id="about">
+			<div class="container">
+				<div class="row mt-4">
+					<div class="col-12 p-4">
 						<div>
-							<h1 class="text-center text-white">Skill's</h1>
-							<h5 class="text-center position-relative">SKILL</h5>
+							<h1 class="text-center left-to-right">About Me</h1>
+							<h5 class="text-center position-relative right-to-left">ABOUT</h5>
 						</div>
-						<div class="col-6 p-3">
-							<span>HTML</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 85%">85%
+						<p>
+							I enjoy coding a lot, so I try to learn as many new things as possible so that my coding
+							skills
+							improve day by day. When
+							I learn something new in coding, I work hard on it with all my heart and try to make myself
+							perfect in it.
+						</p>
+						<div class="row">
+							<div class="col-md-2"></div>
+							<div class="col-md-8">
+								<span><b>Name</b> : Karan Singh</span>
+								<span><b>Date of birth</b> : 10/08/2002</span>
+								<span><b>Address</b> : Almora, Uttarakhand, India</span>
+								<span><b>Current Address</b> : Dwarka Mor, New Delhi, India</span>
+								<span><b>Email</b> : karan.front.developer@gmail.com</span>
+								<span><b>Phone</b> : 9389256332</span>
+								<span><b>Resume</b> : <a href="Karan-Resume.pdf"
+										class="btn bg-info rounded-pill shadow text-white fw-bold">Download
+										<i class="fa-solid fa-file-arrow-down text-black"></i>
+									</a>
+								</span>
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="skill">
+			<div class="container">
+				<div class="row mt-4 p-5">
+					<div class="col-12 p-5">
+						<div class="row">
+							<div>
+								<h1 class="text-center text-white skill-right">Skill's</h1>
+								<h5 class="text-center position-relative skill-left">SKILL</h5>
+							</div>
+							<div class="col-6 p-3">
+								<span>HTML</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 85%">85%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>CSS</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-black"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 80%">80%
+							<div class="col-6 p-3">
+								<span>CSS</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-black"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 80%">80%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>JAVASCRIPT</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 60%">60%
+							<div class="col-6 p-3">
+								<span>JAVASCRIPT</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 60%">60%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>BOOTSTRAP</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 75%">75%
+							<div class="col-6 p-3">
+								<span>BOOTSTRAP</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 75%">75%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>JQUERY</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 55%">55%
+							<div class="col-6 p-3">
+								<span>JQUERY</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 55%">55%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>PHP</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 70%">70%
+							<div class="col-6 p-3">
+								<span>PHP</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 70%">70%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>LARAVEL</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 60%">60%
+							<div class="col-6 p-3">
+								<span>LARAVEL</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 60%">60%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>MYSQL</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 60%">60%
+							<div class="col-6 p-3">
+								<span>MYSQL</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 60%">60%
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-6 p-3">
-							<span>WORDPRESS</span> <i class="fa-solid fa-star"></i>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-									style="width: 50%">50%
+							<div class="col-6 p-3">
+								<span>WORDPRESS</span> <i class="fa-solid fa-star"></i>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+										role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+										style="width: 50%">50%
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="project" class="bg-black">
-		<div class="container">
-			<div class="row mt-4 pt-5 pb-5 text-center">
-				<div class="col-12 p-5">
-					<div>
-						<h1 class="text-center text-white">Project's</h1>
-						<h5 class="text-center position-relative">PROJECT</h5>
-					</div>
-				</div>
-				<div class="col-md-5 p-3 bg-white">
-					<a href="https://www.hanumandevotee.com/"><img src="hanumanji.png" alt=""
-							class="shadow rounded"></a><br>
-					<a href="https://www.hanumandevotee.com/" class="button btn">Click To Check</a>
-				</div>
-				<div class="col-md-7 p-3 bg-white">
-					<a href="https://openabstract.org/"><img src="openabstract.jpg" class="shadow rounded"
-							alt=""></a><br>
-					<a href="https://openabstract.org/" class="button btn">Click To Check</a>
-				</div>
-				<div class="col-md-12 p-3 bg-white">
-					<a href="https://www.journalsinsights.com/"><img src="journal.png" alt=""
-							class="shadow rounded"></a><br>
-					<a href="https://www.journalsinsights.com/" class="button btn">Click To Check</a>
-				</div>
-				<div class="col-12 mt-5">
-					<h1 class="text-center text-white">I'm Available for freelancing</h1>
-					<h5 class="text-center position-relative">Freelancing</h5>
-				</div>
-				<div class="row text-center mt-5">
-					<div class="col-4 p-5 pt-0">
-						<div class="card bg-dark">
-							<div class="card-header">
-								<h2 class="text-white">Complete Projects</h2>
-							</div>
-							<div class="card-body">
-								5
-							</div>
+		<section id="project" class="bg-black">
+			<div class="container">
+				<div class="row mt-4 pt-5 pb-5 text-center">
+					<div class="col-12 p-5">
+						<div>
+							<h1 class="text-center text-white thrdS-r">Project's</h1>
+							<h5 class="text-center position-relative thrdS-l">PROJECT</h5>
 						</div>
 					</div>
-					<div class="col-4 p-5 pt-0">
-						<div class="card bg-dark">
-							<div class="card-header">
-								<h2 class="text-white">Happy Customers</h2>
-							</div>
-							<div class="card-body">
-								9
-							</div>
+					<div class="col-md-6 p-3 hanumanProject">
+						<a href="https://www.hanumandevotee.com/"><img src="image/hanumanji.png" alt=""
+								class="shadow rounded"></a><br>
+						<a href="https://www.hanumandevotee.com/" class="button btn">Click To Open</a>
+					</div>
+					<div class="col-md-6 p-3">
+						<div class="skillsSpan hanuskill">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>BOOTSTRAP</span>
+							<span>JAVASCRIPT</span>
+							<span>PHP</span>
 						</div>
 					</div>
-					<div class="col-4 p-5 pt-0">
-						<div class="card bg-dark">
-							<div class="card-header">
-								<h2 class="text-white">Customers Review</h2>
+					<div class="col-md-6 p-3">
+						<div class="skillsSpan openskill">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>BOOTSTRAP</span>
+							<span>JAVASCRIPT</span>
+						</div>
+					</div>
+					<div class="col-md-6 p-3 openabstractP">
+						<a href="https://openabstract.org/"><img src="image/openabstract.jpg" class="shadow rounded"
+								alt=""></a><br>
+						<a href="https://openabstract.org/" class="button btn">Click To Open</a>
+					</div>
+					<div class="col-md-6 p-3 journalP">
+						<a href="https://www.journalsinsights.com/"><img src="image/journal.png" alt=""
+								class="shadow rounded"></a><br>
+						<a href="https://www.journalsinsights.com/" class="button btn">Click To Open</a>
+					</div>
+					<div class="col-md-6 p-3">
+						<div class="skillsSpan journalskill">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>BOOTSTRAP</span>
+							<span>JAVASCRIPT</span>
+							<span>PHP</span>
+						</div>
+					</div>
+					<div class="col-12 mt-5">
+						<h1 class="text-center text-white">I'm Available for freelancing</h1>
+						<h5 class="text-center position-relative">Freelancing</h5>
+					</div>
+					<div class="row text-center mt-5">
+						<div class="col-4 p-5 pt-0 completep">
+							<div class="card bg-dark">
+								<div class="card-header">
+									<h2 class="text-white">Complete Projects</h2>
+								</div>
+								<div class="card-body">
+									5
+								</div>
 							</div>
-							<div class="card-body">
-								<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-									class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-									class="fa-solid fa-star"></i>
+						</div>
+						<div class="col-4 p-5 pt-0 happyc">
+							<div class="card bg-dark">
+								<div class="card-header">
+									<h2 class="text-white">Happy Customers</h2>
+								</div>
+								<div class="card-body">
+									3
+								</div>
+							</div>
+						</div>
+						<div class="col-4 p-5 pt-0 customers">
+							<div class="card bg-dark">
+								<div class="card-header">
+									<h2 class="text-white">Customers Review</h2>
+								</div>
+								<div class="card-body">
+									<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+										class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+										class="fa-solid fa-star"></i>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="contact">
-		<div class="container">
-			<div class="row mt-4 text-center mb-5">
-				<div class="col-12 p-5">
-					<div>
-						<h1 class="text-center text-white">Contact Me</h1>
-						<h5 class="text-center position-relative">CONTACT</h5>
+		<section id="contact">
+			<div class="container">
+				<div class="row mt-4 text-center mb-5">
+					<div class="col-12 p-5">
+						<div>
+							<h1 class="text-center text-white forthS-r">Contact Me</h1>
+							<h5 class="text-center position-relative forthS-l">CONTACT</h5>
+						</div>
 					</div>
-				</div>
-				<div class="col-3">
-					<div>
-						<i class="fa-solid fa-location-crosshairs"></i>
+					<div class="col-3">
+						<div>
+							<i class="fa-solid fa-location-crosshairs"></i>
+						</div>
+						<div class="me">
+							Address
+						</div>
+						<div>
+							New Delhi, India
+						</div>
 					</div>
-					<div class="me">
-						Address
+					<div class="col-3">
+						<div>
+							<i class="fa-solid fa-phone-volume"></i>
+						</div>
+						<div class="me">
+							Phone
+						</div>
+						<div>
+							+91 93892 56332
+						</div>
 					</div>
-					<div>
-						New Delhi, India
+					<div class="col-3">
+						<div>
+							<i class="fa-solid fa-paper-plane"></i>
+						</div>
+						<div class="me">
+							Email
+						</div>
+						<div>
+							karan.front.developer@gmail.com
+						</div>
 					</div>
-				</div>
-				<div class="col-3">
-					<div>
-						<i class="fa-solid fa-phone-volume"></i>
-					</div>
-					<div class="me">
-						Phone
-					</div>
-					<div>
-						+91 93892 56332
-					</div>
-				</div>
-				<div class="col-3">
-					<div>
-						<i class="fa-solid fa-paper-plane"></i>
-					</div>
-					<div class="me">
-						Email
-					</div>
-					<div>
-						karan.front.debeloper@gmail.com
-					</div>
-				</div>
-				<div class="col-3">
-					<div>
-						<i class="fa-brands fa-google-plus"></i>
-					</div>
-					<div class="me">
-						Google
-					</div>
-					<div>
-						hanumandevotee.com
+					<div class="col-3">
+						<div>
+							<i class="fa-brands fa-google-plus"></i>
+						</div>
+						<div class="me">
+							Google
+						</div>
+						<div>
+							hanumandevotee.com
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
 
-	<footer class="bg-black text-white ">
-		<p class="m-0 text-center p-4">© 2024 - Karan Singh Portfolio</p>
-	</footer>
-	<!-----To Top------->
-	<div class="a to-top" style="display:none;" id="myBtn"><i class="fa-solid fa-jet-fighter-up"></i></div>
+		<footer class="bg-black text-white ">
+			<p class="m-0 text-center p-4">© 2024 - Karan Singh Portfolio</p>
+		</footer>
+		<!-----To Top------->
+		<div class="a to-top" style="display:none;" id="myBtn"><i class="fa-solid fa-jet-fighter-up"></i></div>
+	</div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+	integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/script.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
 	let mybuttons = document.getElementById("myBtn");
